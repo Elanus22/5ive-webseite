@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5ive – Gedanken über das Leben</title>
+  <meta name="description" content="5ive: fünf Abende, fünf Gespräche über die großen Fragen des Lebens. Neugierig, ergebnisoffen und an ganz normalen Orten – im Pub, im Wohnzimmer, um die Ecke." />
+
+  <meta property="og:title"       content="5ive – Gedanken über das Leben" />
+  <meta property="og:description" content="Fünf Abende, fünf Gespräche über die großen Fragen des Lebens." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="assets/logo.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#ffeedb", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
+        fontFamily: { sans: ["Noto Sans","system-ui","sans-serif"], display: ["Noto Sans","sans-serif"], script: ["Caveat","cursive"], serif: ["Noto Serif","Georgia","serif"] },
+      }},
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-white text-ink antialiased">
+
+  <!-- ====================== HEADER / NAV ====================== -->
+  <header data-header class="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur-md transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="assets/Logo.png" alt="5ive – Gedanken über das Leben" class="h-10 w-auto" />
+      </a>
+      <ul class="hidden md:flex items-center gap-9">
+        <li><a data-nav-link href="index.html"      class="nav-link">Home</a></li>
+        <li><a data-nav-link href="teilnehmen.html" class="nav-link">Teilnehmen</a></li>
+        <li><a data-nav-link href="starten.html"    class="nav-link">Starten</a></li>
+        <li><a href="starten.html" class="btn btn-primary !py-2.5 !px-5 text-sm">5ive starten</a></li>
+      </ul>
+      <button data-nav-toggle class="hamburger md:hidden p-2 -mr-2" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div data-mobile-menu class="mobile-menu md:hidden bg-white/95 backdrop-blur-md border-t border-cream">
+      <ul class="px-6 py-3 flex flex-col">
+        <li><a data-nav-link href="index.html"      class="block py-3 text-lg nav-link">Home</a></li>
+        <li><a data-nav-link href="teilnehmen.html" class="block py-3 text-lg nav-link">Teilnehmen</a></li>
+        <li><a data-nav-link href="starten.html"    class="block py-3 text-lg nav-link">Starten</a></li>
+        <li class="py-3"><a href="starten.html" class="btn btn-primary w-full">5ive starten</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-grain">
+      <div class="blob blob--cream blob--a w-[34rem] h-[34rem] -top-32 -right-32"></div>
+      <div class="blob blob--green blob--b w-[24rem] h-[24rem] top-1/3 -left-40"></div>
+      <div class="blob blob--cream blob--c w-[20rem] h-[20rem] bottom-0 right-1/4"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 w-full">
+        <div class="flex flex-col lg:flex-row lg:items-center gap-10 xl:gap-20">
+
+          <!-- Textblock -->
+          <div class="max-w-2xl lg:flex-1">
+            <p class="reveal font-script text-3xl md:text-4xl text-green mb-4">Fünf Abende. Fünf Gesprächsthemen.</p>
+
+            <h1 class="reveal font-display font-bold text-ink leading-[0.98] text-5xl sm:text-6xl md:text-7xl text-balance" data-delay="1">
+              <span id="hero-question" class="block transition-opacity duration-500">Was macht mein Leben&nbsp;reich?</span>
+            </h1>
+
+            <p class="reveal text-lg md:text-xl text-ink-soft mt-8 max-w-2xl leading-relaxed" data-delay="2">
+              Über die großen Fragen des Lebens reden – neugierig, ehrlich und
+              ergebnisoffen. Ohne erhobenen Zeigefinger. </br>Ohne Anmeldung. Einfach vorbeischauen.
+            </p>
+
+            <div class="reveal flex flex-wrap gap-4 mt-10" data-delay="3">
+              <a href="teilnehmen.html" class="btn btn-primary text-base">
+                Abend in deiner Nähe finden
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+              </a>
+              <a href="starten.html" class="btn btn-ghost text-base">5ive selbst veranstalten</a>
+            </div>
+
+            <!-- Themen-Pills -->
+            <ul class="reveal flex flex-wrap gap-2.5 mt-12" data-delay="4">
+              <li class="px-4 py-1.5 rounded-full bg-cream text-ink-soft text-sm font-medium">glücklich</li>
+              <li class="px-4 py-1.5 rounded-full bg-cream text-ink-soft text-sm font-medium">himmlisch</li>
+              <li class="px-4 py-1.5 rounded-full bg-cream text-ink-soft text-sm font-medium">frei</li>
+              <li class="px-4 py-1.5 rounded-full bg-cream text-ink-soft text-sm font-medium">geliebt</li>
+              <li class="px-4 py-1.5 rounded-full bg-cream text-ink-soft text-sm font-medium">verbunden</li>
+            </ul>
+          </div>
+
+          <!-- Logo rechts (ab lg-Breakpoint) -->
+          <div class="hidden lg:flex flex-shrink-0 items-center justify-center">
+            <img src="assets/Logo.png" alt="5ive" class="w-72 xl:w-96 drop-shadow-2xl" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== DER THEMENZYKLUS ====================== -->
+    <section id="themen" class="relative py-24 md:py-32 bg-cream/40 overflow-hidden">
+      <div class="blob blob--green blob--c w-[22rem] h-[22rem] -left-32 bottom-0"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+
+        <div class="max-w-3xl mb-12">
+          <p class="reveal text-green-deep font-semibold tracking-wide uppercase text-sm mb-4">Der Themenzyklus</p>
+          <h2 class="reveal font-display font-bold text-4xl md:text-5xl leading-tight text-ink text-balance" data-delay="1">
+            Gemeinsam nachdenken.
+          </h2>
+          <p class="reveal text-ink-soft text-lg mt-3 max-w-lg leading-relaxed" data-delay="2">
+            Jeder der fünf Abende widmet sich einer existenziellen Frage des Lebens.
+            Klicke dich durch die Themen:
+          </p>
+        </div>
+
+        <div class="reveal grid lg:grid-cols-12 gap-8 items-start pt-2" data-delay="2">
+
+          <!-- Linke Spalte: Themen-Buttons -->
+          <div class="lg:col-span-5 flex flex-col gap-3">
+
+            <button data-topic="glücklich" class="topic-btn">
+              <div class="topic-btn__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <div class="flex-1">
+                <div class="topic-btn__badge">Abend 1</div>
+                <div class="topic-btn__title">glücklich</div>
+              </div>
+              <svg class="topic-btn__chevron w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <button data-topic="himmlisch" class="topic-btn">
+              <div class="topic-btn__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="flex-1">
+                <div class="topic-btn__badge">Abend 2</div>
+                <div class="topic-btn__title">himmlisch</div>
+              </div>
+              <svg class="topic-btn__chevron w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <button data-topic="frei" class="topic-btn">
+              <div class="topic-btn__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+              </div>
+              <div class="flex-1">
+                <div class="topic-btn__badge">Abend 3</div>
+                <div class="topic-btn__title">frei</div>
+              </div>
+              <svg class="topic-btn__chevron w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <button data-topic="geliebt" class="topic-btn">
+              <div class="topic-btn__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <div class="flex-1">
+                <div class="topic-btn__badge">Abend 4</div>
+                <div class="topic-btn__title">geliebt</div>
+              </div>
+              <svg class="topic-btn__chevron w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <button data-topic="verbunden" class="topic-btn">
+              <div class="topic-btn__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path stroke-linecap="round" stroke-linejoin="round" d="M23 21v-2a4 4 0 0 0-3-3.87"/><path stroke-linecap="round" stroke-linejoin="round" d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="flex-1">
+                <div class="topic-btn__badge">Abend 5</div>
+                <div class="topic-btn__title">verbunden</div>
+              </div>
+              <svg class="topic-btn__chevron w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+          </div>
+
+          <!-- Rechte Spalte: Detail-Panels -->
+          <div class="lg:col-span-7">
+
+            <div data-topic-panel="glücklich"
+                 class="topic-panel bg-white rounded-[2rem] rounded-bl-md p-8 md:p-10 shadow-sm border border-cream/60 relative overflow-hidden">
+              <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full opacity-20 pointer-events-none" style="background:#7eaf90;filter:blur(2rem)"></div>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-white shadow-sm border border-green/20" style="color:var(--green)">Abend 1</span>
+                <span class="w-2.5 h-2.5 rounded-full" style="background:#7eaf90"></span>
+              </div>
+              <h3 class="font-display font-bold text-2xl md:text-3xl text-ink leading-tight mb-4">
+                „Was macht mein Leben reich?"
+              </h3>
+              <div class="w-14 h-0.5 rounded-full mb-5" style="background:var(--green);opacity:0.6"></div>
+              <p class="text-ink-soft leading-relaxed">
+                Am ersten Abend dreht sich alles um das Streben nach Glück. Wir jagen Momenten hinterher, hoffen auf Erfüllung durch Erfolg, Konsum oder Status. Doch was trägt uns wirklich, wenn der Alltag einkehrt oder Krisen klopfen? Wir blicken tief in das, was unser Dasein substanziell reich macht.
+              </p>
+              <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
+                <span>5ive Thema: Glücklich</span>
+                <span>Ergebnisoffen & neugierig</span>
+              </div>
+            </div>
+
+            <div data-topic-panel="himmlisch"
+                 class="topic-panel bg-white rounded-[2rem] rounded-bl-md p-8 md:p-10 shadow-sm border border-cream/60 relative overflow-hidden">
+              <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full opacity-20 pointer-events-none" style="background:#e5b682;filter:blur(2rem)"></div>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-white shadow-sm border border-green/20" style="color:var(--green)">Abend 2</span>
+                <span class="w-2.5 h-2.5 rounded-full" style="background:#e5b682"></span>
+              </div>
+              <h3 class="font-display font-bold text-2xl md:text-3xl text-ink leading-tight mb-4">
+                „Gibt es mehr als das, was ich sehe?"
+              </h3>
+              <div class="w-14 h-0.5 rounded-full mb-5" style="background:#e5b682;opacity:0.6"></div>
+              <p class="text-ink-soft leading-relaxed">
+                Gibt es Dimensionen jenseits unserer naturwissenschaftlichen Messbarkeit? An diesem Abend erforschen wir das Geheimnisvolle, die Sehnsucht nach Transzendenz und die Frage, ob da draußen – oder tief in uns – ein Himmel offensteht.
+              </p>
+              <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
+                <span>5ive Thema: Himmlisch</span>
+                <span>Ergebnisoffen & neugierig</span>
+              </div>
+            </div>
+
+            <div data-topic-panel="frei"
+                 class="topic-panel bg-white rounded-[2rem] rounded-bl-md p-8 md:p-10 shadow-sm border border-cream/60 relative overflow-hidden">
+              <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full opacity-20 pointer-events-none" style="background:#90a2b8;filter:blur(2rem)"></div>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-white shadow-sm border border-green/20" style="color:var(--green)">Abend 3</span>
+                <span class="w-2.5 h-2.5 rounded-full" style="background:#90a2b8"></span>
+              </div>
+              <h3 class="font-display font-bold text-2xl md:text-3xl text-ink leading-tight mb-4">
+                „Kann ich wirklich frei sein?"
+              </h3>
+              <div class="w-14 h-0.5 rounded-full mb-5" style="background:#90a2b8;opacity:0.6"></div>
+              <p class="text-ink-soft leading-relaxed">
+                Freiheit wird oft als Abwesenheit von Verpflichtungen verstanden. Doch wahre innere Freiheit befreit uns von Schuld, Ängsten und dem Zwang, ständig gefallen zu müssen. Wir sprechen über Autonomie, Abhängigkeiten und den Befreiungsschlag, den geschenkte Gnade bereithält.
+              </p>
+              <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
+                <span>5ive Thema: Frei</span>
+                <span>Ergebnisoffen & neugierig</span>
+              </div>
+            </div>
+
+            <div data-topic-panel="geliebt"
+                 class="topic-panel bg-white rounded-[2rem] rounded-bl-md p-8 md:p-10 shadow-sm border border-cream/60 relative overflow-hidden">
+              <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full opacity-20 pointer-events-none" style="background:#da9393;filter:blur(2rem)"></div>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-white shadow-sm border border-green/20" style="color:var(--green)">Abend 4</span>
+                <span class="w-2.5 h-2.5 rounded-full" style="background:#da9393"></span>
+              </div>
+              <h3 class="font-display font-bold text-2xl md:text-3xl text-ink leading-tight mb-4">
+                „Wer bin ich? Vom Geliebt-Sein &amp; Selbstwert."
+              </h3>
+              <div class="w-14 h-0.5 rounded-full mb-5" style="background:#da9393;opacity:0.6"></div>
+              <p class="text-ink-soft leading-relaxed">
+                Unser Selbstwert ist ein zerbrechliches Gut. Wir vergleichen uns ständig, definieren uns über das Urteil anderer. 5ive lädt ein, die fundamentale Zusage neu zu hören: Du bist gewollt. Du bist wertvoll. Du bist bedingungslos geliebt.
+              </p>
+              <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
+                <span>5ive Thema: Geliebt</span>
+                <span>Ergebnisoffen & neugierig</span>
+              </div>
+            </div>
+
+            <div data-topic-panel="verbunden"
+                 class="topic-panel bg-white rounded-[2rem] rounded-bl-md p-8 md:p-10 shadow-sm border border-cream/60 relative overflow-hidden">
+              <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full opacity-20 pointer-events-none" style="background:#b2bc8e;filter:blur(2rem)"></div>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-white shadow-sm border border-green/20" style="color:var(--green)">Abend 5</span>
+                <span class="w-2.5 h-2.5 rounded-full" style="background:#b2bc8e"></span>
+              </div>
+              <h3 class="font-display font-bold text-2xl md:text-3xl text-ink leading-tight mb-4">
+                „Wie leben, dass Leben gelingt?"
+              </h3>
+              <div class="w-14 h-0.5 rounded-full mb-5" style="background:#b2bc8e;opacity:0.6"></div>
+              <p class="text-ink-soft leading-relaxed">
+                Niemand ist eine Insel. Wir wachsen durch Beziehungen – zu Mitmenschen, zur Schöpfung, zu Gott. Wie gestalten wir gesunde Gemeinschaften und finden eine Lebenspraxis, die Verbundenheit statt Vereinsamung fördert?
+              </p>
+              <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
+                <span>5ive Thema: Verbunden</span>
+                <span>Ergebnisoffen & neugierig</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== KONZEPT FÜR SUCHENDE ====================== -->
+    <section id="konzept" class="relative py-24 md:py-32 overflow-hidden">
+      <div class="blob blob--cream blob--b w-[28rem] h-[28rem] -right-40 top-10"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+          <!-- Linke Spalte -->
+          <div class="lg:col-span-7 space-y-6">
+            <p class="reveal text-green-deep font-semibold tracking-wide uppercase text-sm">Was ist 5ive?</p>
+            <h2 class="reveal font-display font-bold text-4xl md:text-5xl leading-tight text-ink text-balance" data-delay="1">
+              Konzept für Suchende.
+            </h2>
+            <p class="reveal text-lg text-ink-soft leading-relaxed" data-delay="2">
+              <span class="font-script text-green text-2xl">5ive</span> steht für fünf
+              Gesprächseinladungen an Menschen, denen Kirche als Institution fremd
+              geworden ist, die Glauben keine oder wenig Relevanz beimessen oder die sich selbst
+              als „religiös unmusikalisch" empfinden. Fünf Abende mit interaktiven
+              Impulsen, Erfahrungsaustausch und viel Zeit für Gespräche über Gott und
+              die Welt. Gemeinsam, neugierig und ergebnisoffen.
+            </p>
+
+            <div class="reveal grid sm:grid-cols-2 gap-5 pt-2" data-delay="3">
+              <div class="p-6 bg-cream rounded-[1.75rem] rounded-tr-md">
+                <div class="flex items-center gap-2.5 mb-2.5 text-green-deep">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="2.5"/></svg>
+                  <h4 class="font-display font-bold text-base text-ink">Der Veranstaltungsort</h4>
+                </div>
+                <p class="text-sm text-ink-soft leading-relaxed">
+                  Im Irish Pub, im Wohnzimmer, der VHS, der Kneipe um die Ecke oder an
+                  anderen Orten außerhalb religiöser Institutionen. Ohne Anmeldung – einfach vorbeischauen.
+                </p>
+              </div>
+              <div class="p-6 bg-cream rounded-[1.75rem] rounded-tl-md">
+                <div class="flex items-center gap-2.5 mb-2.5 text-green-deep">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path stroke-linecap="round" stroke-linejoin="round" d="M23 21v-2a4 4 0 0 0-3-3.87"/><path stroke-linecap="round" stroke-linejoin="round" d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <h4 class="font-display font-bold text-base text-ink">Wer wir sind</h4>
+                </div>
+                <p class="text-sm text-ink-soft leading-relaxed">
+                  Entwickelt innerhalb der Katholischen Charismatischen Erneuerung (CE).
+                  5ive basiert weder auf einer spezifisch katholischen noch einer spezifisch
+                  „charismatischen" Theologie.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rechte Spalte: Zitat-Block -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-sm">
+              <div class="absolute -top-5 -right-5 w-12 h-12 rounded-full bg-cream pointer-events-none"></div>
+              <div class="absolute -bottom-5 -left-5 w-16 h-16 rounded-full pointer-events-none" style="background:rgba(126,175,144,0.12)"></div>
+              <div class="organic-quote bg-green p-8 md:p-10 text-white shadow-xl text-center relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 opacity-40 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H5.5A3.67 3.67 0 019.17 7.5V6H7.17zm9 0A5.17 5.17 0 0011 11.17V18h6.83v-6.83H14.5a3.67 3.67 0 013.67-3.67V6h-2z"/></svg>
+                <blockquote class="text-lg font-script text-white/95 leading-relaxed">
+                  „Es braucht Orte für Smalltalk. Und es braucht endlich wieder unkomplizierte Orte für MEHR."
+                </blockquote>
+                <div class="w-12 h-px bg-white/40 my-5 mx-auto rounded-full"></div>
+                <cite class="block text-xs font-semibold tracking-wider uppercase text-white/80 not-italic">
+                  – 5ive Team Nördlingen
+                </cite>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== VIDEOS ====================== -->
+    <section id="videos" class="relative py-24 md:py-32 bg-cream/40 overflow-hidden">
+      <div class="blob blob--cream blob--a w-[26rem] h-[26rem] -right-40 -top-20"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+        <div class="max-w-3xl mb-14">
+          <p class="reveal text-green-deep font-semibold tracking-wide uppercase text-sm mb-4">5ive in Bewegung</p>
+          <h2 class="reveal font-display font-bold text-4xl md:text-5xl leading-tight text-ink text-balance" data-delay="1">
+            Ein Eindruck, wie sich das anfühlt.
+          </h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="reveal video-card">
+            <video data-video autoplay muted loop playsinline preload="metadata" poster="assets/videos/poster1.jpg">
+              <source src="assets/videos/video1.mp4" type="video/mp4" />
+            </video>
+            <div class="video-fallback" style="display:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span class="font-medium">Video folgt in Kürze</span>
+            </div>
+          </div>
+          <div class="reveal video-card" data-delay="1">
+            <video data-video autoplay muted loop playsinline preload="metadata" poster="assets/videos/poster2.jpg">
+              <source src="assets/videos/video2.mp4" type="video/mp4" />
+            </video>
+            <div class="video-fallback" style="display:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span class="font-medium">Video folgt in Kürze</span>
+            </div>
+          </div>
+          <div class="reveal video-card" data-delay="2">
+            <video data-video autoplay muted loop playsinline preload="metadata" poster="assets/videos/poster3.jpg">
+              <source src="assets/videos/video3.mp4" type="video/mp4" />
+            </video>
+            <div class="video-fallback" style="display:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span class="font-medium">Video folgt in Kürze</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CTA BANNER ====================== -->
+    <section class="relative py-24 md:py-32 overflow-hidden">
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+        <div class="relative bg-green rounded-[2.5rem] px-8 py-16 md:p-20 text-center overflow-hidden">
+          <div class="blob blob--cream blob--b w-80 h-80 -top-20 -left-10 opacity-30"></div>
+          <div class="relative z-10 max-w-3xl mx-auto">
+            <h2 class="reveal font-display font-bold text-3xl md:text-5xl text-white leading-tight text-balance mb-6">
+              Bring die großen Fragen an deinen Ort.
+            </h2>
+            <p class="reveal text-white/90 text-lg md:text-xl mb-10 text-balance" data-delay="1">
+              Unter dem Titel 5ive können überall in Deutschland solche
+              Abende entstehen. Mit wenig Aufwand, klarem Konzept und viel Freiheit.
+            </p>
+            <div class="reveal flex flex-wrap gap-4 justify-center" data-delay="2">
+              <a href="starten.html"    class="btn bg-white text-green-deep hover:bg-cream text-base">Jetzt 5ive starten</a>
+              <a href="teilnehmen.html" class="btn btn-ghost border-white text-white hover:bg-white hover:text-green-deep text-base">Hier teilnehmen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="relative bg-ink text-white/75 pt-16 pb-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <span class="font-script text-4xl text-green">5ive</span>
+          <p class="mt-3 text-white/60 max-w-xs leading-relaxed">Gedanken über das Leben. Fünf Abende, fünf Gespräche über die großen Fragen.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Entdecken</h3>
+          <ul class="space-y-2.5">
+            <li><a href="index.html"      class="hover:text-green transition-colors">Home</a></li>
+            <li><a href="teilnehmen.html" class="hover:text-green transition-colors">Teilnehmen</a></li>
+            <li><a href="starten.html"    class="hover:text-green transition-colors">Starten</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:barbaralei@hotmail.com" class="hover:text-green transition-colors">barbaralei@hotmail.com</a></li>
+            <li><a href="starten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/50">
+        <p>&copy; <span data-year>2026</span> 5ive. Eine Initiative für gute Gespräche.</p>
+        <a href="impressum.html" class="hover:text-green transition-colors">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

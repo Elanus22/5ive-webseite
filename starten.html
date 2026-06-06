@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starten – 5ive an deinem Ort</title>
+  <meta name="description" content="Bring 5ive an deinen Ort. Wir geben dir Konzept, Material und Begleitung – kostenlos." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#ffeedb", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
+        fontFamily: { sans: ["Noto Sans","system-ui","sans-serif"], display: ["Noto Sans","sans-serif"], script: ["Caveat","cursive"], serif: ["Noto Serif","Georgia","serif"] },
+      }},
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-white text-ink antialiased">
+
+  <!-- Tailwind-Safelist für dynamisch gesetzte Feedback-Klassen (form.js) -->
+  <div class="hidden bg-green/15 text-green-deep border-green/40 bg-red-50 text-red-700 border-red-200" aria-hidden="true"></div>
+
+  <!-- ====================== HEADER / NAV ====================== -->
+  <header data-header class="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur-md transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="assets/Logo.png" alt="5ive – Gedanken über das Leben" class="h-10 w-auto" />
+      </a>
+      <ul class="hidden md:flex items-center gap-9">
+        <li><a data-nav-link href="index.html"      class="nav-link">Home</a></li>
+        <li><a data-nav-link href="teilnehmen.html" class="nav-link">Teilnehmen</a></li>
+        <li><a data-nav-link href="starten.html"    class="nav-link">Starten</a></li>
+        <li><a href="#kontakt" class="btn btn-primary !py-2.5 !px-5 text-sm">Loslegen</a></li>
+      </ul>
+      <button data-nav-toggle class="hamburger md:hidden p-2 -mr-2" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div data-mobile-menu class="mobile-menu md:hidden bg-white/95 backdrop-blur-md border-t border-cream">
+      <ul class="px-6 py-3 flex flex-col">
+        <li><a data-nav-link href="index.html"      class="block py-3 text-lg nav-link">Home</a></li>
+        <li><a data-nav-link href="teilnehmen.html" class="block py-3 text-lg nav-link">Teilnehmen</a></li>
+        <li><a data-nav-link href="starten.html"    class="block py-3 text-lg nav-link">Starten</a></li>
+        <li class="py-3"><a href="#kontakt" class="btn btn-primary w-full">Loslegen</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====================== HERO ====================== -->
+    <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden bg-grain">
+      <div class="blob blob--green blob--a w-[30rem] h-[30rem] -top-24 -left-32"></div>
+      <div class="blob blob--cream blob--c w-[24rem] h-[24rem] top-1/3 -right-32"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+        <div class="max-w-3xl">
+          <p class="reveal font-script text-3xl md:text-4xl text-green mb-3">Werde Gastgeber:in.</p>
+          <h1 class="reveal font-display font-bold text-5xl md:text-7xl leading-[1.02] text-ink text-balance" data-delay="1">
+            Starte 5ive an deinem Ort.
+          </h1>
+          <p class="reveal text-lg md:text-xl text-ink-soft mt-7 leading-relaxed max-w-2xl" data-delay="2">
+            Du brauchst keine Bühne und kein Theologiestudium – nur einen Raum, ein
+            paar Menschen und Lust auf gute Gespräche. Wir geben dir kostenlos Konzept,
+            Material und Begleitung an die Hand.
+          </p>
+          <div class="reveal mt-8" data-delay="3">
+            <a href="#kontakt" class="btn btn-primary text-base">Jetzt anfragen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SO GEHT'S ====================== -->
+    <section class="relative py-16 md:py-20 overflow-hidden">
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="reveal bg-cream rounded-[2rem] rounded-bl-md p-8">
+            <span class="font-display font-bold text-5xl text-green">01</span>
+            <h3 class="font-display font-bold text-2xl text-ink mt-4 mb-2">Melde dich</h3>
+            <p class="text-ink-soft leading-relaxed">Schreib uns kurz über das Formular. Wir melden uns und besprechen alles Weitere.</p>
+          </div>
+          <div class="reveal bg-cream rounded-[2rem] rounded-bl-md p-8" data-delay="1">
+            <span class="font-display font-bold text-5xl text-green">02</span>
+            <h3 class="font-display font-bold text-2xl text-ink mt-4 mb-2">Bekomme alles</h3>
+            <p class="text-ink-soft leading-relaxed">Du erhältst Vorlagen, Grafiken und Begleitung – erprobt und sofort einsetzbar.</p>
+          </div>
+          <div class="reveal bg-cream rounded-[2rem] rounded-bl-md p-8" data-delay="2">
+            <span class="font-display font-bold text-5xl text-green">03</span>
+            <h3 class="font-display font-bold text-2xl text-ink mt-4 mb-2">Lade ein</h3>
+            <p class="text-ink-soft leading-relaxed">Such einen passenden Ort, lade Menschen ein – und los gehen eure Gespräche.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== KONTAKT & FORMULAR ====================== -->
+    <section id="kontakt" class="relative py-20 md:py-28 bg-cream/40 overflow-hidden scroll-mt-24">
+      <div class="blob blob--green blob--b w-[22rem] h-[22rem] -left-32 bottom-0"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+
+        <div class="mb-12">
+          <p class="reveal text-green-deep font-semibold tracking-wide uppercase text-sm mb-4">Dachmarke nutzen</p>
+          <h2 class="reveal font-display font-bold text-4xl md:text-5xl leading-tight text-ink text-balance" data-delay="1">
+            Was wir dir mitgeben.
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+
+          <!-- Linke Spalte: Checkliste + Kontakt -->
+          <div class="lg:col-span-5 space-y-6">
+
+            <div class="reveal bg-cream rounded-[2rem] rounded-bl-md p-8 md:p-10">
+              <h3 class="font-display font-bold text-xl text-ink mb-6">Was wir dir schenken</h3>
+              <ul class="space-y-5">
+                <li class="checklist-item">
+                  <svg class="checklist-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span class="text-sm text-ink-soft leading-relaxed">
+                    <strong class="text-ink">Vorlagen &amp; Inhalte:</strong> Detaillierte Ausarbeitungen der 5 Abende, mit Power-Point Präsentationen.
+                  </span>
+                </li>
+                <li class="checklist-item">
+                  <svg class="checklist-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span class="text-sm text-ink-soft leading-relaxed">
+                    <strong class="text-ink">Grafik &amp; Design:</strong> Flyervorlage, Plakatvorlage, Social Media Vorlagen.
+                  </span>
+                </li>
+                <li class="checklist-item">
+                  <svg class="checklist-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span class="text-sm text-ink-soft leading-relaxed">
+                    <strong class="text-ink">Dachmarken-Präsenz:</strong> Direkter Eintrag deiner Stadt in die bundesweite Veranstaltungsliste.
+                  </span>
+                </li>
+                <li class="checklist-item">
+                  <svg class="checklist-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  <span class="text-sm text-ink-soft leading-relaxed">
+                    <strong class="text-ink">Ansprechpartner &amp; Community:</strong> Persönlicher Draht zu den Gründern und Erfahrungsaustausch mit anderen Veranstaltern.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="reveal contact-card" data-delay="1">
+              <div class="text-xs font-semibold uppercase tracking-widest text-green-deep mb-2">Deine Ansprechpartnerin</div>
+              <div class="font-display font-bold text-base text-ink mb-1">Barbara Fischer</div>
+              <div class="text-sm text-ink-soft mb-3">Kath. Charismatische Erneuerung</div>
+              <a href="mailto:barbaralei@hotmail.com"
+                 class="inline-flex items-center gap-2 text-sm font-semibold text-green-deep hover:text-green transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                barbaralei@hotmail.com
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Rechte Spalte: Formular -->
+          <div class="lg:col-span-7">
+            <form id="starten-form" class="reveal bg-white rounded-[2rem] p-7 md:p-10 shadow-sm" novalidate data-delay="1">
+              <h3 class="font-display font-bold text-xl text-ink mb-6">Veranstalter-Anfrage</h3>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="field-label" for="name">Name <span class="text-green">*</span></label>
+                  <input class="field-input" type="text"  id="name"  name="name"  autocomplete="name"          required placeholder="z.B. Jan Müller" />
+                </div>
+                <div>
+                  <label class="field-label" for="email">E-Mail <span class="text-green">*</span></label>
+                  <input class="field-input" type="email" id="email" name="email" autocomplete="email"         required placeholder="deine@mail.de" />
+                </div>
+              </div>
+              <div class="mt-5">
+                <label class="field-label" for="city">Stadt / Wunsch-Ort <span class="text-green">*</span></label>
+                <input class="field-input" type="text" id="city" name="city" autocomplete="address-level2" required placeholder="z.B. Nördlingen oder Lauffen" />
+              </div>
+              <div class="mt-5">
+                <label class="field-label" for="message">
+                  Deine Nachricht <span class="text-ink-soft/60 font-normal">(optional)</span>
+                </label>
+                <textarea class="field-input" id="message" name="message" rows="4"
+                          placeholder="Erzähle uns kurz von dir oder deinem Team vor Ort…"></textarea>
+              </div>
+
+              <!-- hCaptcha (Spamschutz) – TODO: vor Launch HCAPTCHA_SITE_KEY ersetzen -->
+              <div class="h-captcha mt-6" data-sitekey="928a0298-8788-483c-80fe-037091d848c6"></div>
+
+              <button type="submit" id="form-submit" class="btn btn-primary w-full mt-7 text-base">
+                <span id="form-spinner" class="spinner" style="display:none;"></span>
+                <span id="form-submit-label">Unverbindlich anfragen</span>
+              </button>
+
+              <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+
+              <p class="text-xs text-ink-soft/70 mt-5 text-center leading-relaxed">
+                Deine Daten werden ausschließlich zur Bearbeitung deiner Anfrage genutzt.
+                Mehr im <a href="impressum.html" class="underline hover:text-green-deep">Impressum</a>.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== TESTIMONIALS ====================== -->
+    <section class="relative py-24 md:py-32 overflow-hidden">
+      <div class="blob blob--cream blob--c w-[24rem] h-[24rem] -right-32 top-10"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+
+        <div class="max-w-3xl mb-14">
+          <p class="reveal text-green-deep font-semibold tracking-wide uppercase text-sm mb-4">Feedback von Gründern</p>
+          <h2 class="reveal font-display font-bold text-4xl md:text-5xl leading-tight text-ink text-balance" data-delay="1">
+            Was Gastgeber:innen sagen
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <figure class="reveal testimonial-card bg-cream p-8">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-green mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H5.5A3.67 3.67 0 019.17 7.5V6H7.17zm9 0A5.17 5.17 0 0011 11.17V18h6.83v-6.83H14.5a3.67 3.67 0 013.67-3.67V6h-2z"/></svg>
+            <blockquote class="text-base text-ink leading-relaxed italic">
+              „5ive hat uns geholfen, intensiv mit Menschen ins Gespräch zu kommen, das tolle war das auch einige junge Leute regelmäßig gekommen sind."
+            </blockquote>
+            <figcaption class="mt-5 border-t border-cream/80 pt-4">
+              <span class="font-bold text-sm text-ink block">Karl &amp; Barbara</span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-green-deep">Initiatoren in Nördlingen</span>
+            </figcaption>
+          </figure>
+
+          <figure class="reveal testimonial-card bg-cream p-8" data-delay="1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-green mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H5.5A3.67 3.67 0 019.17 7.5V6H7.17zm9 0A5.17 5.17 0 0011 11.17V18h6.83v-6.83H14.5a3.67 3.67 0 013.67-3.67V6h-2z"/></svg>
+            <blockquote class="text-base text-ink leading-relaxed italic">
+              „Das Material ist unglaublich professionell und die Abende organisieren sich fast von selbst. Ein echter Segen für unsere Stadt."
+            </blockquote>
+            <figcaption class="mt-5 border-t border-cream/80 pt-4">
+              <span class="font-bold text-sm text-ink block">Kerstin &amp; Thomas</span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-green-deep">Veranstalter in Lauffen</span>
+            </figcaption>
+          </figure>
+
+          <figure class="reveal testimonial-card bg-cream p-8" data-delay="2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-green mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H5.5A3.67 3.67 0 019.17 7.5V6H7.17zm9 0A5.17 5.17 0 0011 11.17V18h6.83v-6.83H14.5a3.67 3.67 0 013.67-3.67V6h-2z"/></svg>
+            <blockquote class="text-base text-ink leading-relaxed italic">
+              „In unserer Studentenkneipe ist 5ive mittlerweile ein fester Begriff geworden. Jungen Menschen einen angstfreien Raum für Glaubensfragen zu schenken, verändert alles."
+            </blockquote>
+            <figcaption class="mt-5 border-t border-cream/80 pt-4">
+              <span class="font-bold text-sm text-ink block">Jonas, 28</span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-green-deep">Kneipenleiter in Heidelberg</span>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="relative bg-ink text-white/75 pt-16 pb-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <span class="font-script text-4xl text-green">5ive</span>
+          <p class="mt-3 text-white/60 max-w-xs leading-relaxed">Gedanken über das Leben. Fünf Abende, fünf Gespräche über die großen Fragen.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Entdecken</h3>
+          <ul class="space-y-2.5">
+            <li><a href="index.html"      class="hover:text-green transition-colors">Home</a></li>
+            <li><a href="teilnehmen.html" class="hover:text-green transition-colors">Teilnehmen</a></li>
+            <li><a href="starten.html"    class="hover:text-green transition-colors">Starten</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:barbaralei@hotmail.com" class="hover:text-green transition-colors">barbaralei@hotmail.com</a></li>
+            <li><a href="starten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/50">
+        <p>&copy; <span data-year>2026</span> 5ive. Eine Initiative für gute Gespräche.</p>
+        <a href="impressum.html" class="hover:text-green transition-colors">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- hCaptcha -->
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  <!-- EmailJS SDK v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

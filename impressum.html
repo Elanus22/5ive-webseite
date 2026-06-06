@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum – 5ive</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#ffeedb", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
+        fontFamily: { sans: ["Noto Sans","system-ui","sans-serif"], display: ["Noto Sans","sans-serif"], script: ["Caveat","cursive"], serif: ["Noto Serif","Georgia","serif"] },
+      }},
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-white text-ink antialiased">
+
+  <!-- ====================== HEADER / NAV ====================== -->
+  <header data-header class="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur-md transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="assets/Logo.png" alt="5ive – Gedanken über das Leben" class="h-10 w-auto" />
+      </a>
+      <ul class="hidden md:flex items-center gap-9">
+        <li><a data-nav-link href="index.html"      class="nav-link">Home</a></li>
+        <li><a data-nav-link href="teilnehmen.html" class="nav-link">Teilnehmen</a></li>
+        <li><a data-nav-link href="starten.html"    class="nav-link">Starten</a></li>
+        <li><a href="starten.html" class="btn btn-primary !py-2.5 !px-5 text-sm">5ive starten</a></li>
+      </ul>
+      <button data-nav-toggle class="hamburger md:hidden p-2 -mr-2" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div data-mobile-menu class="mobile-menu md:hidden bg-white/95 backdrop-blur-md border-t border-cream">
+      <ul class="px-6 py-3 flex flex-col">
+        <li><a data-nav-link href="index.html"      class="block py-3 text-lg nav-link">Home</a></li>
+        <li><a data-nav-link href="teilnehmen.html" class="block py-3 text-lg nav-link">Teilnehmen</a></li>
+        <li><a data-nav-link href="starten.html"    class="block py-3 text-lg nav-link">Starten</a></li>
+        <li class="py-3"><a href="starten.html" class="btn btn-primary w-full">5ive starten</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative pt-36 pb-24 md:pt-44 md:pb-32 overflow-hidden bg-grain min-h-[70vh]">
+      <div class="blob blob--cream blob--a w-[26rem] h-[26rem] -top-24 -right-32"></div>
+      <div class="relative z-10 max-w-3xl mx-auto px-5 md:px-8">
+
+        <h1 class="reveal font-display font-bold text-5xl md:text-6xl text-ink mb-10">Impressum</h1>
+
+        <div class="reveal space-y-8 text-ink-soft text-lg leading-relaxed" data-delay="1">
+
+          <div>
+            <h2 class="font-display font-bold text-xl text-ink mb-2">Angaben gemäß § 5 DDG</h2>
+            <p>
+              5ive Projektteam<br />
+              Eine Initiative in der Katholischen Charismatischen Erneuerung (CE e.V.) in Deutschland<br />
+              Schubertstraße 28<br />
+              88214 Ravensburg
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-xl text-ink mb-2">Vertreten durch</h2>
+            <p>Barbara Fischer (Projektverantwortliche 5ive)</p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-xl text-ink mb-2">Kontakt</h2>
+            <p>
+              E-Mail: <a href="mailto:barbaralei@hotmail.com" class="text-green-deep underline hover:text-green">barbaralei@hotmail.com</a>
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-xl text-ink mb-2">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+            <p>Karl Fischer, Birgittenstraße 22, 86747 Maihingen</p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-xl text-ink mb-2">Haftungsausschluss</h2>
+            <p>
+              Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+              Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+              Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten
+              nach den allgemeinen Gesetzen verantwortlich.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-xl text-ink mb-2">Datenschutzerklärung (DSGVO)</h2>
+            <p class="mb-3">
+              Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Personenbezogene Daten, die Sie
+              uns über das Kontaktformular senden (Name, E-Mail-Adresse, Stadt und Nachricht), werden
+              ausschließlich für die Abwicklung Ihrer Anfrage verarbeitet und keinesfalls an Dritte
+              weitergegeben.
+            </p>
+            <p>
+              <strong>Auskunft &amp; Löschung:</strong> Sie haben jederzeit das Recht, unentgeltlich
+              Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten
+              zu erhalten sowie das Recht auf Berichtigung oder Löschung. Wenden Sie sich hierzu bitte
+              an die oben angegebene E-Mail-Adresse.
+            </p>
+          </div>
+
+        </div>
+
+        <a href="index.html" class="reveal btn btn-ghost mt-12" data-delay="2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12"/></svg>
+          Zurück zur Startseite
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="relative bg-ink text-white/75 pt-16 pb-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <span class="font-script text-4xl text-green">5ive</span>
+          <p class="mt-3 text-white/60 max-w-xs leading-relaxed">Gedanken über das Leben. Fünf Abende, fünf Gespräche über die großen Fragen.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Entdecken</h3>
+          <ul class="space-y-2.5">
+            <li><a href="index.html"      class="hover:text-green transition-colors">Home</a></li>
+            <li><a href="teilnehmen.html" class="hover:text-green transition-colors">Teilnehmen</a></li>
+            <li><a href="starten.html"    class="hover:text-green transition-colors">Starten</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:barbaralei@hotmail.com" class="hover:text-green transition-colors">barbaralei@hotmail.com</a></li>
+            <li><a href="starten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/50">
+        <p>&copy; <span data-year>2026</span> 5ive. Eine Initiative für gute Gespräche.</p>
+        <a href="impressum.html" class="hover:text-green transition-colors">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
