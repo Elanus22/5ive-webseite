@@ -15,7 +15,7 @@
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#ffeedb", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
+        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#d2c7c2", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
         fontFamily: { sans: ["Noto Sans","system-ui","sans-serif"], display: ["Noto Sans","sans-serif"], script: ["Caveat","cursive"], serif: ["Noto Serif","Georgia","serif"] },
       }},
     };
@@ -34,8 +34,8 @@
       <ul class="hidden md:flex items-center gap-9">
         <li><a data-nav-link href="index.html"      class="nav-link">Home</a></li>
         <li><a data-nav-link href="teilnehmen.html" class="nav-link">Teilnehmen</a></li>
-        <li><a data-nav-link href="starten.html"    class="nav-link">Starten</a></li>
-        <li><a href="starten.html" class="btn btn-primary !py-2.5 !px-5 text-sm">5ive starten</a></li>
+        <li><a data-nav-link href="veranstalten.html"    class="nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"    class="nav-link">Ansprechpartner</a></li>
       </ul>
       <button data-nav-toggle class="hamburger md:hidden p-2 -mr-2" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -45,8 +45,8 @@
       <ul class="px-6 py-3 flex flex-col">
         <li><a data-nav-link href="index.html"      class="block py-3 text-lg nav-link">Home</a></li>
         <li><a data-nav-link href="teilnehmen.html" class="block py-3 text-lg nav-link">Teilnehmen</a></li>
-        <li><a data-nav-link href="starten.html"    class="block py-3 text-lg nav-link">Starten</a></li>
-        <li class="py-3"><a href="starten.html" class="btn btn-primary w-full">5ive starten</a></li>
+        <li><a data-nav-link href="veranstalten.html"    class="block py-3 text-lg nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"    class="block py-3 text-lg nav-link">Ansprechpartner</a></li>
       </ul>
     </div>
   </header>
@@ -76,9 +76,9 @@
           </div>
 
           <div>
-            <h2 class="font-display font-bold text-xl text-ink mb-2">Kontakt</h2>
+            <h2 class="font-display font-bold text-xl text-ink mb-2">Ansprechpartner</h2>
             <p>
-              E-Mail: <a href="mailto:barbaralei@hotmail.com" class="text-green-deep underline hover:text-green">barbaralei@hotmail.com</a>
+              E-Mail: <a href="mailto:barbara.fischer@erneuerung.de" class="text-green-deep underline hover:text-green">barbara.fischer@erneuerung.de</a>
             </p>
           </div>
 
@@ -101,7 +101,7 @@
             <h2 class="font-display font-bold text-xl text-ink mb-2">Datenschutzerklärung (DSGVO)</h2>
             <p class="mb-3">
               Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Personenbezogene Daten, die Sie
-              uns über das Kontaktformular senden (Name, E-Mail-Adresse, Stadt und Nachricht), werden
+              uns über das Ansprechpartnerformular senden (Name, E-Mail-Adresse, Stadt und Nachricht), werden
               ausschließlich für die Abwicklung Ihrer Anfrage verarbeitet und keinesfalls an Dritte
               weitergegeben.
             </p>
@@ -137,14 +137,15 @@
           <ul class="space-y-2.5">
             <li><a href="index.html"      class="hover:text-green transition-colors">Home</a></li>
             <li><a href="teilnehmen.html" class="hover:text-green transition-colors">Teilnehmen</a></li>
-            <li><a href="starten.html"    class="hover:text-green transition-colors">Starten</a></li>
+            <li><a href="veranstalten.html"    class="hover:text-green transition-colors">Veranstalten</a></li>
+            <li><a href="ansprechpartner.html"    class="hover:text-green transition-colors">Ansprechpartner</a></li>
           </ul>
         </div>
         <div>
           <h3 class="text-white font-semibold mb-4">Kontakt</h3>
           <ul class="space-y-2.5">
-            <li><a href="mailto:barbaralei@hotmail.com" class="hover:text-green transition-colors">barbaralei@hotmail.com</a></li>
-            <li><a href="starten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
+            <li><a href="mailto:barbara.fischer@erneuerung.de" class="hover:text-green transition-colors">barbara.fischer@erneuerung.de</a></li>
+            <li><a href="veranstalten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
           </ul>
         </div>
       </div>

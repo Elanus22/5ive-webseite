@@ -15,7 +15,7 @@
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#ffeedb", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
+        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#d2c7c2", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
         fontFamily: { sans: ["Noto Sans","system-ui","sans-serif"], display: ["Noto Sans","sans-serif"], script: ["Caveat","cursive"], serif: ["Noto Serif","Georgia","serif"] },
       }},
     };
@@ -37,8 +37,8 @@
       <ul class="hidden md:flex items-center gap-9">
         <li><a data-nav-link href="index.html"      class="nav-link">Home</a></li>
         <li><a data-nav-link href="teilnehmen.html" class="nav-link">Teilnehmen</a></li>
-        <li><a data-nav-link href="starten.html"    class="nav-link">Starten</a></li>
-        <li><a href="starten.html" class="btn btn-primary !py-2.5 !px-5 text-sm">5ive starten</a></li>
+        <li><a data-nav-link href="veranstalten.html"    class="nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"    class="nav-link">Ansprechpartner</a></li>
       </ul>
       <button data-nav-toggle class="hamburger md:hidden p-2 -mr-2" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -48,8 +48,8 @@
       <ul class="px-6 py-3 flex flex-col">
         <li><a data-nav-link href="index.html"      class="block py-3 text-lg nav-link">Home</a></li>
         <li><a data-nav-link href="teilnehmen.html" class="block py-3 text-lg nav-link">Teilnehmen</a></li>
-        <li><a data-nav-link href="starten.html"    class="block py-3 text-lg nav-link">Starten</a></li>
-        <li class="py-3"><a href="starten.html" class="btn btn-primary w-full">5ive starten</a></li>
+        <li><a data-nav-link href="veranstalten.html"    class="block py-3 text-lg nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"    class="block py-3 text-lg nav-link">Ansprechpartner</a></li>
       </ul>
     </div>
   </header>
@@ -62,13 +62,12 @@
       <div class="blob blob--green blob--c w-[20rem] h-[20rem] top-1/2 -left-32"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
         <div class="max-w-3xl">
-          <p class="reveal font-script text-3xl md:text-4xl text-green mb-3">Komm einfach vorbei.</p>
+          <p class="reveal font-script text-3xl md:text-4xl text-green mb-3">Einfach vorbeikommen.</p>
           <h1 class="reveal font-display font-bold text-5xl md:text-7xl leading-[1.02] text-ink text-balance" data-delay="1">
             Finde einen 5ive-Abend in deiner Nähe.
           </h1>
           <p class="reveal text-lg md:text-xl text-ink-soft mt-7 leading-relaxed max-w-2xl" data-delay="2">
-            Kein Ticket, keine Voranmeldung – komm einfach vor Ort vorbei.
-            Such dir deinen Ableger aus:
+            Kein Ticket, keine Voranmeldung. Einfach vorbeikommen.
           </p>
         </div>
       </div>
@@ -79,8 +78,7 @@
       <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
 
         <div class="flex items-end justify-between flex-wrap gap-4 mb-10">
-          <h2 class="reveal font-display font-bold text-3xl md:text-4xl text-ink">Aktive Ablegerstädte</h2>
-          <p class="reveal text-ink-soft text-sm" data-delay="1">Aus unserer Veranstaltungsdatenbank.</p>
+          <h2 class="reveal font-display font-bold text-3xl md:text-4xl text-ink">Aktuelle Veranstaltungsorte</h2>
         </div>
 
         <!-- Skeleton-Loader -->
@@ -100,7 +98,7 @@
           </div>
           <h3 class="font-display font-bold text-2xl md:text-3xl text-ink mb-3">Bald in deiner Nähe</h3>
           <p class="text-ink-soft text-lg max-w-md mx-auto">Noch keine Veranstaltungen – bald in deiner Nähe. Schau gern später wieder vorbei.</p>
-          <a href="starten.html" class="btn btn-primary mt-7">Selbst einen Abend starten</a>
+          <a href="veranstalten.html" class="btn btn-primary mt-7">Selbst einen Abend starten</a>
         </div>
 
         <!-- Fehlerzustand -->
@@ -128,10 +126,10 @@
           <figure class="reveal testimonial-card bg-white p-8 shadow-sm">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-green mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H5.5A3.67 3.67 0 019.17 7.5V6H7.17zm9 0A5.17 5.17 0 0011 11.17V18h6.83v-6.83H14.5a3.67 3.67 0 013.67-3.67V6h-2z"/></svg>
             <blockquote class="text-base text-ink leading-relaxed italic">
-              „Ich hatte die Befürchtung, missioniert zu werden, aber hier durfte ich einfach ich selbst sein, zweifeln und über Fragen lachen, die sonst nirgendwo Raum haben."
+              „Die Gesprächsthemen haben mich sehr bereichert. Ich komme wieder und lade Bekannte ein, wenn die Veranstaltung erneut angeboten wird."
             </blockquote>
             <figcaption class="mt-5 border-t border-cream/80 pt-4">
-              <span class="font-bold text-sm text-ink block">Sarah, 26</span>
+              <span class="font-bold text-sm text-ink block">Elke, 43</span>
               <span class="text-xs font-semibold uppercase tracking-wider text-green-deep">Teilnehmerin in Nördlingen</span>
             </figcaption>
           </figure>
@@ -150,11 +148,11 @@
           <figure class="reveal testimonial-card bg-white p-8 shadow-sm" data-delay="2">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-green mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H5.5A3.67 3.67 0 019.17 7.5V6H7.17zm9 0A5.17 5.17 0 0011 11.17V18h6.83v-6.83H14.5a3.67 3.67 0 013.67-3.67V6h-2z"/></svg>
             <blockquote class="text-base text-ink leading-relaxed italic">
-              „Eine unglaubliche Atmosphäre. Einfach ein gutes Bier trinken und über Gott reden, ohne schief angeschaut zu werden."
+              „Es war eine sehr gute Gelegenheit,in eine Bar zu gehen und dort über Gott zu sprechen. Das Setting hat mich begeistert."
             </blockquote>
             <figcaption class="mt-5 border-t border-cream/80 pt-4">
-              <span class="font-bold text-sm text-ink block">Michael, 23</span>
-              <span class="text-xs font-semibold uppercase tracking-wider text-green-deep">Teilnehmer in Stuttgart</span>
+              <span class="font-bold text-sm text-ink block">Stefan, 37</span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-green-deep">Teilnehmer in Nördlingen</span>
             </figcaption>
           </figure>
         </div>
@@ -171,7 +169,7 @@
         <p class="reveal text-lg md:text-xl text-ink-soft mb-9 text-balance max-w-2xl mx-auto" data-delay="1">
           Dann werde selbst aktiv. 5ive ist so gedacht, dass überall solche Abende entstehen können – auch bei dir.
         </p>
-        <a href="starten.html" class="reveal btn btn-primary text-base" data-delay="2">5ive an deinem Ort starten</a>
+        <a href="veranstalten.html" class="reveal btn btn-primary text-base" data-delay="2">5ive an deinem Ort starten</a>
       </div>
     </section>
 
@@ -190,14 +188,15 @@
           <ul class="space-y-2.5">
             <li><a href="index.html"      class="hover:text-green transition-colors">Home</a></li>
             <li><a href="teilnehmen.html" class="hover:text-green transition-colors">Teilnehmen</a></li>
-            <li><a href="starten.html"    class="hover:text-green transition-colors">Starten</a></li>
+            <li><a href="veranstalten.html"    class="hover:text-green transition-colors">Veranstalten</a></li>
+            <li><a href="ansprechpartner.html"    class="hover:text-green transition-colors">Ansprechpartner</a></li>
           </ul>
         </div>
         <div>
           <h3 class="text-white font-semibold mb-4">Kontakt</h3>
           <ul class="space-y-2.5">
-            <li><a href="mailto:barbaralei@hotmail.com" class="hover:text-green transition-colors">barbaralei@hotmail.com</a></li>
-            <li><a href="starten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
+            <li><a href="mailto:barbara.fischer@erneuerung.de" class="hover:text-green transition-colors">barbara.fischer@erneuerung.de</a></li>
+            <li><a href="veranstalten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
           </ul>
         </div>
       </div>

@@ -15,7 +15,7 @@
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#ffeedb", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
+        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#d2c7c2", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
         fontFamily: { sans: ["Noto Sans","system-ui","sans-serif"], display: ["Noto Sans","sans-serif"], script: ["Caveat","cursive"], serif: ["Noto Serif","Georgia","serif"] },
       }},
     };
@@ -37,8 +37,8 @@
       <ul class="hidden md:flex items-center gap-9">
         <li><a data-nav-link href="index.html"      class="nav-link">Home</a></li>
         <li><a data-nav-link href="teilnehmen.html" class="nav-link">Teilnehmen</a></li>
-        <li><a data-nav-link href="starten.html"    class="nav-link">Starten</a></li>
-        <li><a href="#kontakt" class="btn btn-primary !py-2.5 !px-5 text-sm">Loslegen</a></li>
+        <li><a data-nav-link href="veranstalten.html"    class="nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"    class="nav-link">Ansprechpartner</a></li>
       </ul>
       <button data-nav-toggle class="hamburger md:hidden p-2 -mr-2" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -48,8 +48,8 @@
       <ul class="px-6 py-3 flex flex-col">
         <li><a data-nav-link href="index.html"      class="block py-3 text-lg nav-link">Home</a></li>
         <li><a data-nav-link href="teilnehmen.html" class="block py-3 text-lg nav-link">Teilnehmen</a></li>
-        <li><a data-nav-link href="starten.html"    class="block py-3 text-lg nav-link">Starten</a></li>
-        <li class="py-3"><a href="#kontakt" class="btn btn-primary w-full">Loslegen</a></li>
+        <li><a data-nav-link href="veranstalten.html"    class="block py-3 text-lg nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"    class="block py-3 text-lg nav-link">Ansprechpartner</a></li>
       </ul>
     </div>
   </header>
@@ -69,7 +69,7 @@
           <p class="reveal text-lg md:text-xl text-ink-soft mt-7 leading-relaxed max-w-2xl" data-delay="2">
             Du brauchst keine Bühne und kein Theologiestudium – nur einen Raum, ein
             paar Menschen und Lust auf gute Gespräche. Wir geben dir kostenlos Konzept,
-            Material und Begleitung an die Hand.
+            Material und bei Bedarf Begleitung an die Hand.
           </p>
           <div class="reveal mt-8" data-delay="3">
             <a href="#kontakt" class="btn btn-primary text-base">Jetzt anfragen</a>
@@ -107,19 +107,18 @@
       <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
 
         <div class="mb-12">
-          <p class="reveal text-green-deep font-semibold tracking-wide uppercase text-sm mb-4">Dachmarke nutzen</p>
+          <p class="reveal text-green-deep font-semibold tracking-wide uppercase text-sm mb-4">5ive Materialien und Namen nutzen</p>
           <h2 class="reveal font-display font-bold text-4xl md:text-5xl leading-tight text-ink text-balance" data-delay="1">
-            Was wir dir mitgeben.
+            Was wir dir mitgeben
           </h2>
         </div>
 
         <div class="grid lg:grid-cols-12 gap-12 items-start">
 
-          <!-- Linke Spalte: Checkliste + Kontakt -->
+          <!-- Linke Spalte: Checkliste + Ansprechpartner -->
           <div class="lg:col-span-5 space-y-6">
 
             <div class="reveal bg-cream rounded-[2rem] rounded-bl-md p-8 md:p-10">
-              <h3 class="font-display font-bold text-xl text-ink mb-6">Was wir dir schenken</h3>
               <ul class="space-y-5">
                 <li class="checklist-item">
                   <svg class="checklist-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -142,7 +141,7 @@
                 <li class="checklist-item">
                   <svg class="checklist-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                   <span class="text-sm text-ink-soft leading-relaxed">
-                    <strong class="text-ink">Ansprechpartner &amp; Community:</strong> Persönlicher Draht zu den Gründern und Erfahrungsaustausch mit anderen Veranstaltern.
+                    <strong class="text-ink">Ansprechpartner &amp; Community:</strong> Persönlicher Draht zu den Initiatoren und Erfahrungsaustausch mit anderen Veranstaltern.
                   </span>
                 </li>
               </ul>
@@ -151,11 +150,11 @@
             <div class="reveal contact-card" data-delay="1">
               <div class="text-xs font-semibold uppercase tracking-widest text-green-deep mb-2">Deine Ansprechpartnerin</div>
               <div class="font-display font-bold text-base text-ink mb-1">Barbara Fischer</div>
-              <div class="text-sm text-ink-soft mb-3">Kath. Charismatische Erneuerung</div>
-              <a href="mailto:barbaralei@hotmail.com"
+              <div class="text-sm text-ink-soft mb-3">Katholische Charismatische Erneuerung</div>
+              <a href="mailto:barbara.fischer@erneuerung.de"
                  class="inline-flex items-center gap-2 text-sm font-semibold text-green-deep hover:text-green transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                barbaralei@hotmail.com
+                barbara.fischer@erneuerung.de
               </a>
             </div>
 
@@ -225,10 +224,10 @@
           <figure class="reveal testimonial-card bg-cream p-8">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-green mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H5.5A3.67 3.67 0 019.17 7.5V6H7.17zm9 0A5.17 5.17 0 0011 11.17V18h6.83v-6.83H14.5a3.67 3.67 0 013.67-3.67V6h-2z"/></svg>
             <blockquote class="text-base text-ink leading-relaxed italic">
-              „5ive hat uns geholfen, intensiv mit Menschen ins Gespräch zu kommen, das tolle war das auch einige junge Leute regelmäßig gekommen sind."
+              „5ive hat uns geholfen, intensiv mit Menschen ins Gespräch zu kommen, das Tolle war, dass auch einige junge Leute regelmäßig gekommen sind."
             </blockquote>
             <figcaption class="mt-5 border-t border-cream/80 pt-4">
-              <span class="font-bold text-sm text-ink block">Karl &amp; Barbara</span>
+              <span class="font-bold text-sm text-ink block">Karl &amp; Barbara J.</span>
               <span class="text-xs font-semibold uppercase tracking-wider text-green-deep">Initiatoren in Nördlingen</span>
             </figcaption>
           </figure>
@@ -247,11 +246,11 @@
           <figure class="reveal testimonial-card bg-cream p-8" data-delay="2">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9 text-green mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M7.17 6A5.17 5.17 0 002 11.17V18h6.83v-6.83H5.5A3.67 3.67 0 019.17 7.5V6H7.17zm9 0A5.17 5.17 0 0011 11.17V18h6.83v-6.83H14.5a3.67 3.67 0 013.67-3.67V6h-2z"/></svg>
             <blockquote class="text-base text-ink leading-relaxed italic">
-              „In unserer Studentenkneipe ist 5ive mittlerweile ein fester Begriff geworden. Jungen Menschen einen angstfreien Raum für Glaubensfragen zu schenken, verändert alles."
+              „Die Abende haben alle sehr bereichert. Ich arbeite das nächste mal wieder mit und lade meine Freunde ein."
             </blockquote>
             <figcaption class="mt-5 border-t border-cream/80 pt-4">
-              <span class="font-bold text-sm text-ink block">Jonas, 28</span>
-              <span class="text-xs font-semibold uppercase tracking-wider text-green-deep">Kneipenleiter in Heidelberg</span>
+              <span class="font-bold text-sm text-ink block">Xaver</span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-green-deep">Mitarbeiter in Nördlingen</span>
             </figcaption>
           </figure>
         </div>
@@ -274,14 +273,15 @@
           <ul class="space-y-2.5">
             <li><a href="index.html"      class="hover:text-green transition-colors">Home</a></li>
             <li><a href="teilnehmen.html" class="hover:text-green transition-colors">Teilnehmen</a></li>
-            <li><a href="starten.html"    class="hover:text-green transition-colors">Starten</a></li>
+            <li><a href="veranstalten.html"    class="hover:text-green transition-colors">Veranstalten</a></li>
+            <li><a href="ansprechpartner.html"    class="hover:text-green transition-colors">Ansprechpartner</a></li>
           </ul>
         </div>
         <div>
           <h3 class="text-white font-semibold mb-4">Kontakt</h3>
           <ul class="space-y-2.5">
-            <li><a href="mailto:barbaralei@hotmail.com" class="hover:text-green transition-colors">barbaralei@hotmail.com</a></li>
-            <li><a href="starten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
+            <li><a href="mailto:barbara.fischer@erneuerung.de" class="hover:text-green transition-colors">barbara.fischer@erneuerung.de</a></li>
+            <li><a href="veranstalten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
           </ul>
         </div>
       </div>

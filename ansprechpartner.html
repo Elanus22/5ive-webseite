@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ansprechpartner – 5ive</title>
+  <meta name="description" content="Was ist 5ive? Konzept für Suchende – und die Menschen dahinter." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#d2c7c2", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
+        fontFamily: { sans: ["Noto Sans","system-ui","sans-serif"], display: ["Noto Sans","sans-serif"], script: ["Caveat","cursive"], serif: ["Noto Serif","Georgia","serif"] },
+      }},
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-white text-ink antialiased">
+
+  <!-- ====================== HEADER / NAV ====================== -->
+  <header data-header class="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur-md transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="assets/Logo.png" alt="5ive – Gedanken über das Leben" class="h-10 w-auto" />
+      </a>
+      <ul class="hidden md:flex items-center gap-9">
+        <li><a data-nav-link href="index.html"             class="nav-link">Home</a></li>
+        <li><a data-nav-link href="teilnehmen.html"        class="nav-link">Teilnehmen</a></li>
+        <li><a data-nav-link href="veranstalten.html"      class="nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"   class="nav-link">Ansprechpartner</a></li>
+      </ul>
+      <button data-nav-toggle class="hamburger md:hidden p-2 -mr-2" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div data-mobile-menu class="mobile-menu md:hidden bg-white/95 backdrop-blur-md border-t border-cream">
+      <ul class="px-6 py-3 flex flex-col">
+        <li><a data-nav-link href="index.html"             class="block py-3 text-lg nav-link">Home</a></li>
+        <li><a data-nav-link href="teilnehmen.html"        class="block py-3 text-lg nav-link">Teilnehmen</a></li>
+        <li><a data-nav-link href="veranstalten.html"      class="block py-3 text-lg nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"   class="block py-3 text-lg nav-link">Ansprechpartner</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====================== WAS IST 5IVE? ====================== -->
+    <section class="relative pt-36 pb-16 md:pt-44 md:pb-20 overflow-hidden bg-grain">
+      <div class="blob blob--cream blob--b w-[28rem] h-[28rem] -right-40 -top-10"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 max-w-3xl">
+        <p class="reveal text-green-deep font-semibold tracking-wide uppercase text-sm mb-4">Was ist 5ive?</p>
+        <h1 class="reveal font-display font-bold text-4xl md:text-5xl leading-tight text-ink text-balance mb-6" data-delay="1">
+          Konzept für Suchende.
+        </h1>
+        <p class="reveal text-lg text-ink-soft leading-relaxed max-w-2xl" data-delay="2">
+          <span class="font-script text-green text-2xl">5ive</span> steht für fünf
+          Gesprächseinladungen an Menschen, denen Kirche als Institution fremd
+          geworden ist, die Glauben keine oder wenig Relevanz beimessen oder die sich selbst
+          als „religiös unmusikalisch" empfinden. Fünf Abende mit interaktiven
+          Impulsen, Erfahrungsaustausch und viel Zeit für Gespräche über Gott und
+          die Welt. Gemeinsam, neugierig und ergebnisoffen.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================== ANSPRECHPARTNER ====================== -->
+    <section class="relative py-20 md:py-28 overflow-hidden">
+      <div class="blob blob--green blob--c w-[22rem] h-[22rem] -left-32 bottom-0"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8">
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl">
+
+          <!-- Barbara Fischer (zuerst) -->
+          <div class="reveal bg-cream rounded-[2rem] overflow-hidden">
+            <div class="aspect-square overflow-hidden">
+              <img src="assets/barbara-fischer.jpg" alt="Barbara Fischer"
+                   class="w-full h-full object-cover object-top" />
+            </div>
+            <div class="p-8">
+              <h3 class="font-display font-bold text-2xl text-ink mb-1">Barbara Fischer</h3>
+              <p class="text-sm text-ink-soft/70 mb-4">Eschborn</p>
+              <a href="mailto:barbara.fischer@erneuerung.de"
+                 class="inline-flex items-center gap-2 text-sm font-semibold text-green-deep hover:text-green transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                barbara.fischer@erneuerung.de
+              </a>
+            </div>
+          </div>
+
+          <!-- Karl Fischer -->
+          <div class="reveal bg-cream rounded-[2rem] overflow-hidden" data-delay="1">
+            <div class="aspect-square overflow-hidden">
+              <img src="assets/karl-fischer.jpg" alt="Karl Fischer"
+                   class="w-full h-full object-cover object-top" />
+            </div>
+            <div class="p-8">
+              <h3 class="font-display font-bold text-2xl text-ink mb-1">Karl Fischer</h3>
+              <p class="text-sm text-ink-soft/70">Nördlingen</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CTA ====================== -->
+    <section class="relative py-20 md:py-28 bg-cream/40 overflow-hidden">
+      <div class="blob blob--cream blob--a w-[24rem] h-[24rem] -right-32 top-0"></div>
+      <div class="relative z-10 max-w-5xl mx-auto px-5 md:px-8 text-center">
+        <h2 class="reveal font-display font-bold text-3xl md:text-5xl text-ink leading-tight text-balance mb-6">
+          Bring 5ive an deinen Ort.
+        </h2>
+        <p class="reveal text-lg md:text-xl text-ink-soft mb-9 text-balance max-w-2xl mx-auto" data-delay="1">
+          Schreib Barbara an oder füll das Formular aus –
+          wir melden uns schnell und persönlich.
+        </p>
+        <div class="reveal flex flex-wrap gap-4 justify-center" data-delay="2">
+          <a href="mailto:barbara.fischer@erneuerung.de" class="btn btn-primary text-base">E-Mail schreiben</a>
+          <a href="veranstalten.html#kontakt" class="btn btn-ghost text-base">Zum Veranstalten-Formular</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="relative bg-ink text-white/75 pt-16 pb-10 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <span class="font-script text-4xl text-green">5ive</span>
+          <p class="mt-3 text-white/60 max-w-xs leading-relaxed">Gedanken über das Leben. Fünf Abende, fünf Gespräche über die großen Fragen.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Entdecken</h3>
+          <ul class="space-y-2.5">
+            <li><a href="index.html"             class="hover:text-green transition-colors">Home</a></li>
+            <li><a href="teilnehmen.html"         class="hover:text-green transition-colors">Teilnehmen</a></li>
+            <li><a href="veranstalten.html"       class="hover:text-green transition-colors">Veranstalten</a></li>
+            <li><a href="ansprechpartner.html"    class="hover:text-green transition-colors">Ansprechpartner</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4">Kontakt</h3>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:barbara.fischer@erneuerung.de" class="hover:text-green transition-colors">barbara.fischer@erneuerung.de</a></li>
+            <li><a href="veranstalten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/50">
+        <p>&copy; <span data-year>2026</span> 5ive. Eine Initiative für gute Gespräche.</p>
+        <a href="impressum.html" class="hover:text-green transition-colors">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

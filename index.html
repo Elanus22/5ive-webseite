@@ -21,7 +21,7 @@
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#ffeedb", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
+        colors: { green: "#7eaf90", "green-deep": "#4c7a60", cream: "#d2c7c2", ink: "#1a1a1a", "ink-soft": "#4a4a4a" },
         fontFamily: { sans: ["Noto Sans","system-ui","sans-serif"], display: ["Noto Sans","sans-serif"], script: ["Caveat","cursive"], serif: ["Noto Serif","Georgia","serif"] },
       }},
     };
@@ -40,8 +40,8 @@
       <ul class="hidden md:flex items-center gap-9">
         <li><a data-nav-link href="index.html"      class="nav-link">Home</a></li>
         <li><a data-nav-link href="teilnehmen.html" class="nav-link">Teilnehmen</a></li>
-        <li><a data-nav-link href="starten.html"    class="nav-link">Starten</a></li>
-        <li><a href="starten.html" class="btn btn-primary !py-2.5 !px-5 text-sm">5ive starten</a></li>
+        <li><a data-nav-link href="veranstalten.html"    class="nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"    class="nav-link">Ansprechpartner</a></li>
       </ul>
       <button data-nav-toggle class="hamburger md:hidden p-2 -mr-2" aria-label="Menü öffnen" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -51,8 +51,8 @@
       <ul class="px-6 py-3 flex flex-col">
         <li><a data-nav-link href="index.html"      class="block py-3 text-lg nav-link">Home</a></li>
         <li><a data-nav-link href="teilnehmen.html" class="block py-3 text-lg nav-link">Teilnehmen</a></li>
-        <li><a data-nav-link href="starten.html"    class="block py-3 text-lg nav-link">Starten</a></li>
-        <li class="py-3"><a href="starten.html" class="btn btn-primary w-full">5ive starten</a></li>
+        <li><a data-nav-link href="veranstalten.html"    class="block py-3 text-lg nav-link">Veranstalten</a></li>
+        <li><a data-nav-link href="ansprechpartner.html"    class="block py-3 text-lg nav-link">Ansprechpartner</a></li>
       </ul>
     </div>
   </header>
@@ -64,7 +64,6 @@
       <div class="blob blob--cream blob--a w-[34rem] h-[34rem] -top-32 -right-32"></div>
       <div class="blob blob--green blob--b w-[24rem] h-[24rem] top-1/3 -left-40"></div>
       <div class="blob blob--cream blob--c w-[20rem] h-[20rem] bottom-0 right-1/4"></div>
-
       <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 w-full">
         <div class="flex flex-col lg:flex-row lg:items-center gap-10 xl:gap-20">
 
@@ -86,7 +85,7 @@
                 Abend in deiner Nähe finden
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
               </a>
-              <a href="starten.html" class="btn btn-ghost text-base">5ive selbst veranstalten</a>
+              <a href="veranstalten.html" class="btn btn-ghost text-base">5ive selbst veranstalten</a>
             </div>
 
             <!-- Themen-Pills -->
@@ -201,7 +200,7 @@
               </h3>
               <div class="w-14 h-0.5 rounded-full mb-5" style="background:var(--green);opacity:0.6"></div>
               <p class="text-ink-soft leading-relaxed">
-                Am ersten Abend dreht sich alles um das Streben nach Glück. Wir jagen Momenten hinterher, hoffen auf Erfüllung durch Erfolg, Konsum oder Status. Doch was trägt uns wirklich, wenn der Alltag einkehrt oder Krisen klopfen? Wir blicken tief in das, was unser Dasein substanziell reich macht.
+                Was macht mich wirklich glücklich? Kann ich glücklich sein, wenn mein Leben nicht so läuft, wie erhofft? Was trägt mich im Alltag und in Krisen? Was macht mein Leben substantiell reich? Es geht um Beziehungen, Sinn, Liebe und um Dinge, die tiefer gehen als Geld oder Besitz.
               </p>
               <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
                 <span>5ive Thema: Glücklich</span>
@@ -221,8 +220,7 @@
               </h3>
               <div class="w-14 h-0.5 rounded-full mb-5" style="background:#e5b682;opacity:0.6"></div>
               <p class="text-ink-soft leading-relaxed">
-                Gibt es Dimensionen jenseits unserer naturwissenschaftlichen Messbarkeit? An diesem Abend erforschen wir das Geheimnisvolle, die Sehnsucht nach Transzendenz und die Frage, ob da draußen – oder tief in uns – ein Himmel offensteht.
-              </p>
+                Gibt es Dimensionen jenseits der naturwissenschaftlichen Messbarkeit? An diesem Abend geht es um die Frage, ob es mehr gibt als das, was wir sehen. Gibt es Transzendenz? Was meinen Menschen eigentlich wenn sie „Gott“ sagen? Wir schauen auf Argumente gegen Gott und auf unterschiedliche Vorstellungen von Gott. Und wenn es tatsächlich einen Gott gibt: Ist er erfahrbar?              </p>
               <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
                 <span>5ive Thema: Himmlisch</span>
                 <span>Ergebnisoffen & neugierig</span>
@@ -237,12 +235,11 @@
                 <span class="w-2.5 h-2.5 rounded-full" style="background:#90a2b8"></span>
               </div>
               <h3 class="font-display font-bold text-2xl md:text-3xl text-ink leading-tight mb-4">
-                „Kann ich wirklich frei sein?"
+                „Kann ich wirklich frei sein? Was hat das mit Gott zu tun?"
               </h3>
               <div class="w-14 h-0.5 rounded-full mb-5" style="background:#90a2b8;opacity:0.6"></div>
               <p class="text-ink-soft leading-relaxed">
-                Freiheit wird oft als Abwesenheit von Verpflichtungen verstanden. Doch wahre innere Freiheit befreit uns von Schuld, Ängsten und dem Zwang, ständig gefallen zu müssen. Wir sprechen über Autonomie, Abhängigkeiten und den Befreiungsschlag, den geschenkte Gnade bereithält.
-              </p>
+                In uns liegt eine tiefe Sehnsucht nach Freiheit, und doch empfinden wir vieles im Leben als einengend: Erwartungen anderer, Druck, Zwänge, Ängste und Ereignisse, die wir nicht beeinflussen können. Kann ich trotzdem innerlich frei sein, - unabhängig von den Umständen? Wir sprechen über Abhängigkeiten, Autonomie und den Wunsch nach einem großen Befreiungsschlag.              </p>
               <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
                 <span>5ive Thema: Frei</span>
                 <span>Ergebnisoffen & neugierig</span>
@@ -261,7 +258,7 @@
               </h3>
               <div class="w-14 h-0.5 rounded-full mb-5" style="background:#da9393;opacity:0.6"></div>
               <p class="text-ink-soft leading-relaxed">
-                Unser Selbstwert ist ein zerbrechliches Gut. Wir vergleichen uns ständig, definieren uns über das Urteil anderer. 5ive lädt ein, die fundamentale Zusage neu zu hören: Du bist gewollt. Du bist wertvoll. Du bist bedingungslos geliebt.
+                Eine der tiefsten menschlichen Fragen: Bin ich geliebt, gehöre ich dazu, werde ich akzeptiert und gesehen? Wir sprechen darüber, wie sehr Ablehnung schmerzen kann und wie wir immer wieder erleben, dass der Wert eines Menschen an die Erfüllung von Bedingungen geknüpft wird. Was wäre, wenn es da den Zuspruch geben würde: Du bist gewollt. Du bist wertvoll. Du bist bedingungslos geliebt!
               </p>
               <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
                 <span>5ive Thema: Geliebt</span>
@@ -281,8 +278,7 @@
               </h3>
               <div class="w-14 h-0.5 rounded-full mb-5" style="background:#b2bc8e;opacity:0.6"></div>
               <p class="text-ink-soft leading-relaxed">
-                Niemand ist eine Insel. Wir wachsen durch Beziehungen – zu Mitmenschen, zur Schöpfung, zu Gott. Wie gestalten wir gesunde Gemeinschaften und finden eine Lebenspraxis, die Verbundenheit statt Vereinsamung fördert?
-              </p>
+                Verbundenheit ist eines, wenn nicht sogar das Topthema in der Glücksforschung: Kein Glück ohne Verbundenheit. Wir wachsen durch Beziehungen - zu Mitmenschen, zur Schöpfung, zu Gott. Wie gestalten wir gesunde Gemeinschaften und finden eine Lebenspraxis, die Verbundenheit statt Vereinsamung fördert?              </p>
               <div class="mt-8 pt-5 border-t border-cream flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-ink-soft/50">
                 <span>5ive Thema: Verbunden</span>
                 <span>Ergebnisoffen & neugierig</span>
@@ -419,7 +415,7 @@
               Abende entstehen. Mit wenig Aufwand, klarem Konzept und viel Freiheit.
             </p>
             <div class="reveal flex flex-wrap gap-4 justify-center" data-delay="2">
-              <a href="starten.html"    class="btn bg-white text-green-deep hover:bg-cream text-base">Jetzt 5ive starten</a>
+              <a href="veranstalten.html"    class="btn bg-white text-green-deep hover:bg-cream text-base">Jetzt 5ive starten</a>
               <a href="teilnehmen.html" class="btn btn-ghost border-white text-white hover:bg-white hover:text-green-deep text-base">Hier teilnehmen</a>
             </div>
           </div>
@@ -442,14 +438,15 @@
           <ul class="space-y-2.5">
             <li><a href="index.html"      class="hover:text-green transition-colors">Home</a></li>
             <li><a href="teilnehmen.html" class="hover:text-green transition-colors">Teilnehmen</a></li>
-            <li><a href="starten.html"    class="hover:text-green transition-colors">Starten</a></li>
+            <li><a href="veranstalten.html"    class="hover:text-green transition-colors">Veranstalten</a></li>
+            <li><a href="ansprechpartner.html"    class="hover:text-green transition-colors">Ansprechpartner</a></li>
           </ul>
         </div>
         <div>
           <h3 class="text-white font-semibold mb-4">Kontakt</h3>
           <ul class="space-y-2.5">
-            <li><a href="mailto:barbaralei@hotmail.com" class="hover:text-green transition-colors">barbaralei@hotmail.com</a></li>
-            <li><a href="starten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
+            <li><a href="mailto:barbara.fischer@erneuerung.de" class="hover:text-green transition-colors">barbara.fischer@erneuerung.de</a></li>
+            <li><a href="veranstalten.html" class="hover:text-green transition-colors">5ive an deinem Ort</a></li>
           </ul>
         </div>
       </div>
