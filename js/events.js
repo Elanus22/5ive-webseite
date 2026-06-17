@@ -42,10 +42,6 @@ const SUPABASE_ANON_KEY = "sb_publishable_dPgoMpQWZOn0UdsRoFiOuA_X032iI50";
 
     card.innerHTML = `
       <div>
-        <span class="inline-block px-3 py-1 rounded-full text-[0.625rem] font-semibold uppercase tracking-widest mb-4"
-              style="background:#fff;color:var(--green);border:1.5px solid rgba(126,175,144,0.2);">
-          Aktiver Ableger
-        </span>
         <h3 class="font-display font-bold text-xl text-ink">${escapeHtml(ev.city)}</h3>
         <div class="mt-4 space-y-2.5">
           <div class="flex items-start gap-2.5 text-sm" style="color:var(--ink-soft)">
