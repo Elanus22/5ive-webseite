@@ -24,6 +24,25 @@ const SUPABASE_ANON_KEY = "sb_publishable_dPgoMpQWZOn0UdsRoFiOuA_X032iI50";
       .replace(/"/g, "&quot;");
   }
 
+  function resolveContact(raw) {
+    if (!raw) return { href: "#", label: raw };
+    const s = raw.trim();
+    if (s.includes("@") && !s.startsWith("@")) {
+      return { href: "mailto:" + s, label: s };
+    }
+    if (s.startsWith("@")) {
+      const handle = s.slice(1);
+      return { href: "https://instagram.com/" + handle, label: s };
+    }
+    if (/^https?:\/\//i.test(s)) {
+      return { href: s, label: s };
+    }
+    if (/^[\d\s\+\-\(\)\/]+$/.test(s)) {
+      return { href: "tel:" + s.replace(/\s/g, ""), label: s };
+    }
+    return { href: "https://instagram.com/" + s, label: "@" + s };
+  }
+
   function setState(state) {
     if (skeleton)    skeleton.style.display    = state === "loading" ? "grid" : "none";
     if (stateEmpty)  stateEmpty.style.display  = state === "empty"   ? "block" : "none";
@@ -40,6 +59,8 @@ const SUPABASE_ANON_KEY = "sb_publishable_dPgoMpQWZOn0UdsRoFiOuA_X032iI50";
     card.className = "event-card-v2 reveal p-6 md:p-8 flex flex-col gap-4";
     card.setAttribute("data-delay", String(index % 3));
 
+    const contact = resolveContact(ev.contact_info);
+    const targetAttr = contact.href.startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : '';
     card.innerHTML = `
       <div>
         <h3 class="font-display font-bold text-xl text-ink">${escapeHtml(ev.city)}</h3>
@@ -57,10 +78,11 @@ const SUPABASE_ANON_KEY = "sb_publishable_dPgoMpQWZOn0UdsRoFiOuA_X032iI50";
       <div class="mt-auto pt-4 border-t" style="border-color:var(--cream)">
         <div class="text-[0.6rem] font-semibold uppercase tracking-widest mb-1" style="color:var(--green)">Veranstalter</div>
         <div class="text-xs font-medium" style="color:var(--ink-soft)">${escapeHtml(ev.organizer_name)}</div>
-        <a href="mailto:${escapeHtml(ev.contact_info)}"
+        <a href="${escapeHtml(contact.href)}"
            class="text-xs font-semibold mt-1 inline-flex items-center gap-1 hover:underline"
-           style="color:var(--green)">
-          ${escapeHtml(ev.contact_info)}
+           style="color:var(--green)"
+           ${targetAttr}>
+          ${escapeHtml(contact.label)}
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         </a>
       </div>
