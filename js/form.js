@@ -2,12 +2,12 @@
    5ive – form.js
    Kontaktformular für Veranstalter ("Starten").
    Versand via EmailJS, Spamschutz via hCaptcha.
-   Ziel-E-Mail: barbaralei@hotmail.com (im EmailJS-Template hinterlegen)
+   Ziel-E-Mail: kontakt@5ive.info (im EmailJS-Template hinterlegen)
    ========================================================================== */
 
-const EMAILJS_PUBLIC_KEY  = "EMAILJS_PUBLIC_KEY";    // TODO: vor Launch ersetzen
-const EMAILJS_SERVICE_ID  = "EMAILJS_SERVICE_ID";    // TODO: vor Launch ersetzen
-const EMAILJS_TEMPLATE_ID = "EMAILJS_TEMPLATE_ID";  // TODO: vor Launch ersetzen
+const EMAILJS_PUBLIC_KEY  = "KKapd401j0aB2uiBp";    // TODO: vor Launch ersetzen
+const EMAILJS_SERVICE_ID  = "service_q0f56e1";    // TODO: vor Launch ersetzen
+const EMAILJS_TEMPLATE_ID = "template_s16pbwx";  // TODO: vor Launch ersetzen
 
 (function () {
   "use strict";
@@ -77,7 +77,7 @@ const EMAILJS_TEMPLATE_ID = "EMAILJS_TEMPLATE_ID";  // TODO: vor Launch ersetzen
       email:    form.email.value.trim(),
       city:     form.city.value.trim(),
       message:  form.message.value.trim(),
-      to_email: "barbaralei@hotmail.com",
+      to_email: "kontakt@5ive.info",
     };
 
     if (!data.name || !data.email || !data.city) {
@@ -103,7 +103,7 @@ const EMAILJS_TEMPLATE_ID = "EMAILJS_TEMPLATE_ID";  // TODO: vor Launch ersetzen
         setLoading(false);
         showFeedback(
           "success",
-          "Danke! Deine Anfrage wurde erfasst. Wir melden uns bald bei dir. (Demo-Modus – EmailJS vor Launch konfigurieren.)"
+          "Danke! Deine Anfrage wurde erfasst. Wir melden uns bald bei dir."
         );
         form.reset();
         resetCaptcha();
@@ -129,7 +129,7 @@ const EMAILJS_TEMPLATE_ID = "EMAILJS_TEMPLATE_ID";  // TODO: vor Launch ersetzen
       setLoading(false);
       showFeedback(
         "error",
-        "Da ist leider etwas schiefgelaufen. Bitte versuche es später erneut oder schreib direkt an barbaralei@hotmail.com."
+        "Da ist leider etwas schiefgelaufen. Bitte versuche es später erneut oder schreib direkt an kontakt@5ive.info."
       );
       resetCaptcha();
     }
