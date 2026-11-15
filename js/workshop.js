@@ -16,8 +16,6 @@
       { id: "2027-01-26", tag: "Dienstag",   datum: "26. Januar 2027", zeit: "19:30–21:30 Uhr", start: "2027-01-26T19:30:00+01:00" },
     ],
     anmeldeseite: "workshop.html",
-    /* Neuer Schlüssel = Pop-up erscheint auch bei Besuchern wieder, die es schon geschlossen haben. */
-    popupKey: "5ive-workshop-popup-2027-01",
     popupVerzoegerungMs: 700,
     empfaenger: "kontakt@5ive.info",
     emailjs: {
@@ -75,16 +73,35 @@
   /* ---------------------------------------------------------------------- */
   /* 2. Pop-up (nur auf Seiten mit <body data-ws-popup>)                      */
   /* ---------------------------------------------------------------------- */
-  function popupSchonGeschlossen() {
-    try { return window.localStorage.getItem(WORKSHOP.popupKey) === "1"; } catch (e) { return false; }
+  /* Das Pop-up erscheint bei jedem Einstieg auf die Seite (direkter Aufruf,
+     Link von außen, Neuladen) – aber nicht, wenn jemand über einen Link
+     innerhalb der Website oder mit dem Zurück-Button hierher kommt.
+     Schließen wird nicht gespeichert. */
+  function hostOhneWww(host) {
+    return String(host || "").replace(/^www\./i, "");
   }
-  function merkePopupGeschlossen() {
-    try { window.localStorage.setItem(WORKSHOP.popupKey, "1"); } catch (e) {}
+  function kommtVonEigenerSeite() {
+    if (!document.referrer) return false;
+    try {
+      return hostOhneWww(new URL(document.referrer).hostname) === hostOhneWww(window.location.hostname);
+    } catch (e) { return false; }
+  }
+  function navigationsTyp() {
+    try {
+      const nav = window.performance.getEntriesByType("navigation")[0];
+      return nav ? nav.type : "navigate";
+    } catch (e) { return "navigate"; }
+  }
+  function popupZeigen() {
+    const typ = navigationsTyp();
+    if (typ === "reload") return true;
+    if (typ === "back_forward") return false;
+    return !kommtVonEigenerSeite();
   }
 
   function initPopup(termine) {
     if (!document.body.hasAttribute("data-ws-popup")) return;
-    if (termine.length === 0 || popupSchonGeschlossen()) return;
+    if (termine.length === 0 || !popupZeigen()) return;
 
     const popup = document.createElement("div");
     popup.className = "ws-popup";
@@ -92,8 +109,7 @@
     popup.setAttribute("aria-modal", "true");
     popup.setAttribute("aria-labelledby", "ws-popup-titel");
     popup.innerHTML =
-      /* Klick auf den Hintergrund schließt bewusst nicht – nur X, „Später“ oder Esc. */
-      '<div class="ws-popup__backdrop"></div>' +
+      '<div class="ws-popup__backdrop" data-ws-schliessen></div>' +
       '<div class="ws-popup__panel">' +
         '<button type="button" class="ws-popup__close" data-ws-schliessen aria-label="Hinweis schließen">' + ICON_SCHLIESSEN + "</button>" +
         '<p class="ws-popup__kicker">Online-Workshop im Januar</p>' +
@@ -110,7 +126,6 @@
     let vorherFokus = null;
 
     function schliessen() {
-      merkePopupGeschlossen();
       popup.classList.remove("is-open");
       document.documentElement.classList.remove("ws-popup-offen");
       document.removeEventListener("keydown", onKey);
@@ -131,7 +146,6 @@
 
     popup.addEventListener("click", function (e) {
       if (e.target.closest("[data-ws-schliessen]")) schliessen();
-      else if (e.target.closest("[data-ws-anmelden]")) merkePopupGeschlossen();
     });
 
     window.setTimeout(function () {
