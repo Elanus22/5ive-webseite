@@ -92,7 +92,8 @@
     popup.setAttribute("aria-modal", "true");
     popup.setAttribute("aria-labelledby", "ws-popup-titel");
     popup.innerHTML =
-      '<div class="ws-popup__backdrop" data-ws-schliessen></div>' +
+      /* Klick auf den Hintergrund schließt bewusst nicht – nur X, „Später“ oder Esc. */
+      '<div class="ws-popup__backdrop"></div>' +
       '<div class="ws-popup__panel">' +
         '<button type="button" class="ws-popup__close" data-ws-schliessen aria-label="Hinweis schließen">' + ICON_SCHLIESSEN + "</button>" +
         '<p class="ws-popup__kicker">Online-Workshop im Januar</p>' +
